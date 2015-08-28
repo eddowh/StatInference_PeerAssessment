@@ -1,4 +1,10 @@
-# Statistical Inference Course Project
+---
+title: "Statistical Inference Course Project"
+output:
+    html_document:
+        keep_md: true
+        theme: cerulean
+---
 
 ****
 
@@ -26,23 +32,17 @@ Illustrate via simulation and associated explanatory text the properties of the 
 In point 3, focus on the difference between the distribution of a large collection of random exponentials and the distribution of a large collection of averages of 40 exponentials. 
 
 As a motivating example, compare the distribution of 1000 random uniforms
-
-```r
+```{r}
 hist(runif(1000))
 ```
 
-![](README_files/figure-html/unnamed-chunk-1-1.png) 
-
 and the distribution of 1000 averages of 40 random uniforms
 
-
-```r
+```{r}
 mns = NULL
 for (i in 1 : 1000) mns = c(mns, mean(runif(40)))
 hist(mns)
 ```
-
-![](README_files/figure-html/unnamed-chunk-2-1.png) 
 
 This distribution looks far more Gaussian than the original uniform distribution!
 
